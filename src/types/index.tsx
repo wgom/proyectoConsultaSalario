@@ -23,5 +23,12 @@ export type SalaryInquiryParams = {
 
 export type RootStakParams = {
     SalaryInquiry: undefined;
-    SalaryDetail: SalaryInquiryParams;
+    SalaryDetail: SalaryInquiry;
 };
+
+export type FlashMessageUtilProps {
+    message: string;
+    type: 'error' | 'warning' | 'info';
+    visible: boolean;
+    onClose: () => void;
+  }

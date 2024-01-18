@@ -1,6 +1,6 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-
+import FlashMessage from "react-native-flash-message";
 import Header from "../../components/Header";
 import SalaryInquiryForm from "../../components/SalaryInquiryForm";
 
@@ -11,6 +11,7 @@ const Home = () => {
     <View style={styles.container}>
       <Header />
       <SalaryInquiryForm/>
+      <FlashMessage position="top" />
     </View>
   );
 };

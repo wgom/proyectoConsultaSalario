@@ -10,11 +10,10 @@ export default async (urlParams?: string) => {
       }`,
     );
     const data = await response.json();
-    //console.log(data);
     if (data.estado.trim() == "error") {
       const transformData = {...data,
-      result: [[data.result]]};
-      //console.log(transformData);
+      result: {data: [[data.result]]}};
+      //console.log(transformData.result.data);
       return Promise.resolve(transformData);
     } else {
       return Promise.resolve(data);
